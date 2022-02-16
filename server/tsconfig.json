@@ -1,0 +1,14 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "target": "es2015",
+    "moduleResolution": "node"
+  },
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "extends": ["airbnb-base", "airbnb-typescript/base", "../.eslintrc.json"],
+  "parserOptions": {
+    "project": "server/tsconfig.eslint.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}

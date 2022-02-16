@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "../.eslintrc.json"
+  ],
+  "parserOptions": {
+    "project": "app/tsconfig.eslint.json"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "react/react-in-jsx-scope": "off"
+      }
+    }
+  ]
+}
