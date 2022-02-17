@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  backend:
+    build:
+      target: development
+    volumes:
+      - .:/app

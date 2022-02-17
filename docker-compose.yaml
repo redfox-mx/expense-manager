@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  backend:
+    build:
+      dockerfile: server/Dockerfile
+      context: .
+    env_file:
+      - 'database.env'
+    ports:
+      - '8080:${PORT:-8080}'
+    depends_on:
+      - postgress
+  postgres:
+    container_name: postgres
+    image: postgres:14.2-alpine3.15
+    env_file:
+      - 'database.env'
+    expose:
+      - 5432
+    volumes:
+      - 'dbpostgres:/var/lib/postgresql/data'
+
+volumes:
+  dbpostgres:

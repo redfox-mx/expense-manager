@@ -1,12 +1,11 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "module": "commonjs",
+    "rootDir": "./src",
     "sourceMap": true,
     "outDir": "../dist/server",
-    "lib": ["es2017"],
-    "types": ["node", "express"]
+    "types": ["node", "express"],
+    "composite": true
   },
   "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }

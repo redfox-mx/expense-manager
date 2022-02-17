@@ -4,20 +4,26 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --project app && vite build",
+    "dev:server": "ts-node-dev --project server/tsconfig.app.json --cls server/src/main.ts",
+    "build:app": "tsc --project app && vite build",
+    "build:server": "tsc --project server/tsconfig.app.json ",
     "preview": "vite preview",
     "prepare": "husky install"
   },
   "dependencies": {
     "express": "^4.17.2",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sequelize": "^6.16.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/node": "^17.0.18",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
+    "@types/validator": "^13.7.1",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vitejs/plugin-react": "^1.0.7",
